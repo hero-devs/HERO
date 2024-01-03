@@ -1,0 +1,27 @@
+[package]
+name = "deep-link"
+authors = ["katsumi143 <32640219+katsumi143@users.noreply.github.com>"]
+version = "0.0.1"
+description = "an application that eases management of video games"
+
+readme = "../../README.md"
+license = "AGPL-3.0-only"
+homepage = "https://hero-devs.com"
+repository = "https://github.com/hero-devs/HERO"
+
+edition = "2021"
+rust-version = "1.73"
+
+[dependencies]
+log = "0.4.20"
+dirs = "5.0.1"
+ctor = "0.2.5"
+once_cell = "1.18.0"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.51.0"
+windows-sys = { version = "0.48.0", features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging", "Win32_UI_Input_KeyboardAndMouse"] }
+interprocess = { version = "1.2.1", default-features = false }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.4.1"

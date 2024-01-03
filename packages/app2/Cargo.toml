@@ -1,0 +1,28 @@
+[package]
+name = "hero-app"
+authors = ["katsumi143 <32640219+katsumi143@users.noreply.github.com>"]
+version = "0.0.1"
+description = "an application that eases management of video games"
+
+readme = "../../README.md"
+license = "AGPL-3.0-only"
+homepage = "https://hero-devs.com"
+repository = "https://github.com/hero-devs/HERO"
+
+edition = "2021"
+rust-version = "1.73"
+
+[dependencies]
+rfd = "0.12.1"
+tokio = { version = "1.33.0", features = ["full"] }
+serde = { version = "1.0.190", features = ["derive"] }
+image = { version = "0.24.7", default-features = false, features = ["png", "gif", "jpeg", "webp"] }
+eframe = { version = "0.23.0", features = ["wgpu", "wayland"], default-features = false }
+reqwest = { version = "0.11.22", features = ["json", "blocking"] }
+deep-link = { path = "../deep-link" }
+hero-core = { path = "../core", features = ["core", "egui", "ui"] }
+parking_lot = "0.12.1"
+egui_extras = { version = "0.23.0", features = ["all_loaders"] }
+poll-promise = "0.3.0"
+window-shadows = "0.2.2"
+window-vibrancy = "0.4.3"

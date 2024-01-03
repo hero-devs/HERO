@@ -1,0 +1,7 @@
+target/
+.DS_STORE
+
+# legacy HERO, pending removal
+packages/app/
+packages/extension/
+packages/extension-typings/
