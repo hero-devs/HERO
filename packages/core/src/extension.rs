@@ -4,6 +4,7 @@ use std::sync::Arc;
 use std::path::PathBuf;
 use crate::Icon;
 use crate::game::Game;
+use crate::downloader::Downloader;
 
 #[cfg(feature = "core")]
 use crate::state::State;
@@ -21,6 +22,10 @@ pub trait Extension: Icon + Sync + Send {
 	fn setup(&self) {}
 
 	fn games(&self) -> Option<Vec<Arc<Box<dyn Game>>>> {
+		None
+	}
+
+	fn downloader(&self) -> Option<Arc<Downloader>> {
 		None
 	}
 

@@ -4,6 +4,7 @@ pub mod content;
 pub mod storage;
 pub mod instance;
 pub mod extension;
+pub mod downloader;
 pub mod localisation;
 
 #[cfg(feature = "ui")]
